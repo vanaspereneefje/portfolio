@@ -1,0 +1,303 @@
+body {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a:link { 
+    text-decoration: none; 
+    color: inherit;
+  } 
+
+a {
+    color: white;
+}
+
+@font-face {
+    font-family: titlefont;
+    src: url(/fonts/akira_expanded/Akira_Expanded_Demo.otf);
+  }
+
+.header {
+    display: flex;
+    margin: 20px;
+}
+
+.logo {
+    margin: 0px;
+    color:#FF0084;
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+    gap: 100px;
+    font-size: 30px;
+    color: white;
+}
+
+h1 {
+    font-family: titlefont;
+    background-image: linear-gradient(to right, #FF0084, #7300FF);
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+    text-align: center;
+    font-size: 40px;
+}
+
+h1.nametitle {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.subtitle {
+    font-family: titlefont;
+    font-size: 18px;
+    margin: 0px;
+    color: rgb(186, 186, 186);
+    text-align: center;
+}
+
+.intro {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introtext {
+    justify-items: center;
+    max-width: 800px;
+    max-height: fit-content;
+    display: inline;
+    margin: 20px;
+}
+
+.profileimg {
+    height: 550px;
+    width: auto;
+    justify-items: center;
+    margin: 20px;
+}
+
+.introduction {
+    max-width: 90%;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    color: white;
+}
+
+.projectsbutton {
+    font-family: titlefont;
+}
+
+.project {
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projectpic {
+    margin-right: 200px;
+    width: 600px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectpic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 2px; /* This determines border thickness */
+    background: linear-gradient(to right, #FF0084, #7300FF);
+    
+    /* Mask to prevent covering the image */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+
+    z-index: 1;
+}
+
+.project:hover {
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    color: white;
+}
+
+.defaultborder {
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    color: white;
+  }
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+
+.servicesdiv {
+    justify-self: center;
+}
+
+.services {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin-bottom: 200px;
+}
+
+.serviceimg {
+    width: 150px;
+    height: 150px;
+}
+
+.service {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    color: white;
+    justify-items: center;
+    align-content: center;
+}
+
+.servicetitle {
+  font-size: 24px;  
+}
+
+.service-popup {
+    display: none;
+    position: fixed;
+    background-color: rgb(63, 63, 63);
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.linkedinLogo {
+    width: 25px;
+    height: auto;
+}
+
+input {
+    border-radius: 10px;
+    background: linear-gradient(rgb(25, 25, 25), rgb(25, 25, 25)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+}
+
+.letstalk{
+    display: flex;
+    gap: 100px;
+}
+
+.contactdiv {
+    justify-self: center;
+    margin-bottom: 100px;
+}
+
+.contactinfo {
+    margin-right: 50px;
+}
+
+textarea {
+    border-radius: 10px;
+    background: linear-gradient(rgb(25, 25, 25), rgb(25, 25, 25)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 200px;
+    color: white;
+    font-size: 16px;
+}
+
+#submitbutton {
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(to right, #FF0084, #7300FF) border-box;
+    border: 4px solid transparent;
+    border-width: 2px;
+    color: white;
+    font-size: 16px;
+}
+
+.title {
+    justify-self: center;
+    margin-bottom: 50px;
+}
+
+footer {
+    background: linear-gradient(to right, #870046, #3b0083);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footertext {
+    font-size: 12px;
+}

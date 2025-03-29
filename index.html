@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <img src="images/logo.png" class="logo">
+            <ul class="navbar">
+                <li><a href="#" class="navlink" data-target="projects">Projects</a></li>
+                <li><a href="#" class="navlink" data-target="services">Services</a></li>
+                <li><a href="#" class="navlink" data-target="contact">Let's Talk</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <img src="images/pink_picture3.png" alt="Eefje van Asperen portrait" class="profileimg">
+            <div class="introtext">
+                <h1 class="nametitle">Eefje van Asperen</h1>
+                <p class="subtitle">web development - webdesign - 2D/3D art</p>
+                <p class="introduction">"Hey there! I’m Eefje, a web developer, designer, and digital artist 
+                    passionate about blending code with creativity. I love turning ideas 
+                    into interactive and visually experiences, whether it’s a sleek website,
+                     a bold design for your website, or a 3D model. 
+                    If you're looking for someone who can 
+                    make websites that are both functional and visually striking, 
+                    let's connect!"</p>
+                <a href="#projects" class="button projectsbutton">View my work</a>
+            </div>
+        </div>
+
+        <div class="projects" id="projects">
+            <div class="projectpic"></div>
+            <div class="projectsdiv">
+                <h1>Projects</h1>
+                <a href="https://vanaspereneefje.github.io/Weather-App/" target="_blank">
+                    <div class="project" id=project1 data-image="/images/weather_app.png">
+                        <p>weather app</p>
+                        <p>Web development</p>
+                    </div>
+                </a>
+                <a href="https://www.artstation.com/eefjevanasperen" target="_blank">
+                    <div class="project" id=project2 data-image="/images/eefje-van-asperen-beauty-van-asperen-eefje-3.jpg">
+                        <p>artstation</p>
+                        <p>2D/3D art portfolio</p>
+                    </div>
+                </a>
+                <a href="https://vanaspereneefje.github.io/the-collection/" target="_blank">
+                    <div class="project" id=project3 data-image="/images/collection.png">
+                        <p>The collection</p>
+                        <p>Web development</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="servicesdiv" id="services">
+            <h1 class="title">services</h1>
+            <div class="services">
+                <div class="service">
+                    <img src="/images/code_white.png" class="serviceimg">
+                    <h3 class="servicetitle">Web Development</h3>
+                    <button class="open-button" data-popup="webdevPopup">learn more -></button>
+                    <div class="service-popup" id="webdevPopup">
+                        <button class="close-button" data-close="webdevPopup">x</button>
+                        <h3>Web Development</h3>
+                        <p>qualifications</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="/images/web_white.png" class="serviceimg">
+                    <h3 class="servicetitle">Web Design</h3>
+                    <button class="open-button" data-popup="webdesPopup">learn more -></button>
+                    <div class="service-popup" id="webdesPopup">
+                        <button class="close-button" data-close="webdesPopup">x</button>
+                        <h3>Web Design</h3>
+                        <p>qualifications</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="/images/brush_white.png" class="serviceimg">
+                    <h3 class="servicetitle">2D Art</h3>
+                    <button class="open-button" data-popup="artPopup">learn more -></button>
+                    <div class="service-popup" id="artPopup">
+                        <button class="close-button" data-close="artPopup">x</button>
+                        <h3>2D Art</h3>
+                        <p>qualifications</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="/images/cube_white.png" class="serviceimg">
+                    <h3 class="servicetitle">3D Art</h3>
+                    <button class="open-button" data-popup="dartPopup">learn more -></button>
+                    <div class="service-popup" id="dartPopup">
+                        <button class="close-button" data-close="dartPopup">x</button>
+                        <h3>3D Art</h3>
+                        <p>qualifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactdiv" id="contact">
+            <h1 class="title">Let's Talk!</h1>
+            <div class="letstalk">
+                <div class="contactinfo">
+                    <h2>Email</h2>
+                    <p><a href="mailto:eefjevanasperen@hotmail.com">eefjevanasperen@hotmail.com</a></p>
+                    <h2>LinkedIn</h2>
+                    <a href="https://www.linkedin.com/in/eefje-van-asperen-4984a0244/" target="_blank"><img src="images/linkedinlogo.png" class="linkedinLogo"></a>
+                </div>
+                <div class="contactform">
+                    <h2>Contact form</h2>
+                    <form action="https://formsubmit.co/d46e05798111ddb5d9f67c31b8c225ef" method="POST">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Message</label><br>
+                        <textarea id="message" name="message" required></textarea><br>
+                        <button type="submit" id="submitbutton">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div>
+            <p class="footertext">@2025 - All rights reserved, web design and development - Eefje van Asperen</p>
+        </div>
+    </footer>
+</body>
+</html>
